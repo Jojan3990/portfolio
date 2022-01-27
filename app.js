@@ -3,7 +3,7 @@ const express = require('express');
 const { engine } = require('express-handlebars');
 const path = require('path');
 const app = express();
-const port = 3000;
+const port=process.env.PORT || 1234;
 
 app.engine('handlebars', engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
