@@ -13,5 +13,14 @@
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
     "mariadb": "^2.5.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jojan3990/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jojan3990/portfolio/issues"
+  },
+  "homepage": "https://github.com/Jojan3990/portfolio#readme"
 }
