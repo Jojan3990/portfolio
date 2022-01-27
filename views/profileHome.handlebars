@@ -1,0 +1,231 @@
+<section id="home" class="banner_wrapper">
+    <div class="container">
+        <div class="con-row-clk">
+
+            <div class="row">
+                {{!-- small and mobile center is center and other is left --}}
+                <div class="col-sm-12 text-center text-md-start">
+                    <h6>WELCOME TO MY PORTFOLIO</h6>
+                    <h1>I'm Jojan Rai<br> <span>Developer</span><br>from NEPAL. </h1>
+                    <div class="mt-4">
+                        <button type="button" class="btn btn-primary">Download CV</button>
+                    </div>
+                </div>
+            </div>
+            <div class="clk d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="/public/images/fb1.jpg" class="card-img-top" alt="profile.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Jojan Rai</h5>
+                        <p class="card-text">This is Jojan awesome. i am awesome, so awesome tht i cant say it.</p>
+                        <a href="#work-collection1" class="btn btn-primary">Work Collection</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroolspy-bb " id="navbar-example">
+            <nav id="navbar-example2" class="navbar navbar-light bg-light px-3 sticky-top mt-5 mb-5">
+                <a class="navbar-brand" id="work-collection1" href="#">Work Collection</a>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#scrollspyHeading1">Clock</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#scrollspyHeading2">To-Do</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false">Drop</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#scrollspyHeading1">Clock</a></li>
+                            <li><a class="dropdown-item" href="#scrollspyHeading2">To-Do</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="">Coming soon</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example"
+                tabindex="0">
+                <h3 id="scrollspyHeading1">
+                    <div class="spinner-grow text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div> &nbsp;Clock
+                    <div class="my-4">
+                        <div class="jumbotron">
+                            <h1 class="display-4"> <span id="time"></span></h1>
+                            <p class="lead">Current Time Nepal</p>
+                            <hr class="my-4">
+
+                            <a class="btn btn-secondary btn-lg mb-5" target="_blank"
+                                href="https://github.com/Jojan3990/JS/tree/main/Project1" role="button">Get Code</a>
+                        </div>
+                    </div>
+                </h3>
+
+                <h3 id="scrollspyHeading2" class="mt-5">
+                    <div class="spinner-grow text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div> &nbsp;ToDo List
+                    <h2 class="text-center my-4">TODOs List</h2>
+                    <!-- <form> -->
+                    <div class="form-group mb-5">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">Add Item to List</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" rows="3"></textarea>
+                    </div>
+                    <button id="add" type="submit" class="btn btn-primary my-4">Add To List</button>
+                    <!-- </form> -->
+                    <h2 id="items" class="my-4">Your Items</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">SNO</th>
+                                <th scope="col">Items Title</th>
+                                <th scope="col">Item Description</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablebody">
+                        </tbody>
+                    </table>
+                    {{!--
+                    <hr class="my-4"> --}}
+                    <a class="btn btn-secondary btn-lg mb-5" target="_blank"
+                        href="https://github.com/Jojan3990/JS/tree/main/Project2" role="button">Get Code</a>
+                </h3>
+                {{!-- <h3 id="scrollspyHeading3" class="mt-5">Third heading</h3> --}}
+            </div>
+
+        </div>
+        <div class="picture-show">
+            <h3 class="text-center mt-5 mb-4" id="picture-work">Website Work</h3>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/public//images/work1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/public//images/work2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/public/images/work3.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="get-info-work mt-5">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            GitHub
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Get My GitHub</strong>
+                            <br>
+                            <p>GitHub Contains all most all my work.</p>
+                            <i class="fab fa-github"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a
+                                class="btn btn-secondary btn-lg mb-5" target="_blank"
+                                href="https://github.com/Jojan3990" role="button">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Facebook
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Connect on Facebook</strong>
+                            <br>
+                            <p>You can also find and connect with me on facebook</p>
+                            <i class="fab fa-facebook"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a
+                                class="btn btn-secondary btn-lg mb-5" target="_blank"
+                                href="https://www.facebook.com/joz.iar.2443" role="button">Facebook</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            LinkedIn
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Find me on LinkedIn</strong>
+                            <br>
+                            <p>You can also find and connect with me on LinkedIn</p>
+                            <i class="fab fa-linkedin"></i> &nbsp;&nbsp;&nbsp;&nbsp;<a
+                                class="btn btn-secondary btn-lg mb-5" target="_blank"
+                                href="https://www.linkedin.com/in/jojan-rai-413a811ab/" role="button">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-home mt-5">
+            <h3 class="text-center">Contact Me</h3>
+            {{!-- <form> --}}
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text mail-contact">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                {{!-- <div id="liveAlertPlaceholder"></div> --}}
+                <button type="submit" class="btn btn-primary" id="submit_contact">Submit</button>
+                {{!-- <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button> --}}
+            {{!-- </form>  --}}
+        </div>
+        <div id="error-succ-msg" class="mt-3 mb-2">
+        </div>
+        <div class="foot-navpage">
+            <nav aria-label="..." class="mt-5 page-change">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link">Previous</a>
+                    </li>
+                    <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="/">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
