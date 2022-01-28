@@ -1,52 +1,56 @@
-add=document.getElementById("add");
+add = document.getElementById("add");
 var tit;
 var desc;
-function getAndUpdate(){
+function getAndUpdate() {
     console.log("updating list");
-    tit=document.getElementById('title').value;
-    desc=document.getElementById('description').value;
+    tit = document.getElementById('title').value;
+    desc = document.getElementById('description').value;
 
-    if(tit=="" && desc==""){
+    if (tit == "" && desc == "") {
         console.log("null");
     }
-    else{
+    else {
         // var itemsJsonArray=['title','desc'];
-        itemsJsonArrayStr=localStorage.getItem('itemsJson');
-        itemsJsonArray=JSON.parse(itemsJsonArrayStr);
-        if(itemsJsonArray==null){
+        itemsJsonArrayStr = localStorage.getItem('itemsJson');
+        itemsJsonArray = JSON.parse(itemsJsonArrayStr);
+        if (itemsJsonArray == null) {
             console.log("null itemsJsonArray");
-            var itemsJsonArray=[];
-            localStorage.setItem('itemsJson',JSON.stringify(itemsJsonArray));
-            itemsJsonArray.push([tit,desc]);
-            localStorage.setItem('itemsJson',JSON.stringify(itemsJsonArray));
+            var itemsJsonArray = [];
+            localStorage.setItem('itemsJson', JSON.stringify(itemsJsonArray));
+            itemsJsonArray.push([tit, desc]);
+            localStorage.setItem('itemsJson', JSON.stringify(itemsJsonArray));
+            tit = document.getElementById('title').value = "";
+            desc = document.getElementById('description').value = "";
         }
-        else{
-            console.log(itemsJsonArray,'jojan');
-            itemsJsonArray.push([tit,desc]);
-            localStorage.setItem('itemsJson',JSON.stringify(itemsJsonArray));
+        else {
+            console.log(itemsJsonArray, 'jojan');
+            itemsJsonArray.push([tit, desc]);
+            localStorage.setItem('itemsJson', JSON.stringify(itemsJsonArray));
             console.log("item added");
+            tit = document.getElementById('title').value = "";
+            desc = document.getElementById('description').value = "";
         }
     }
     update();
 }
 
-function update(){
+function update() {
     //populate the table
     // var itemsJsonArray=['title','desc'];
     // localStorage.setItem('itemsJson',JSON.stringify(itemsJsonArray));
-    itemsJsonArrayStr=localStorage.getItem('itemsJson');
-    itemsJsonArray=JSON.parse(itemsJsonArrayStr);
+    itemsJsonArrayStr = localStorage.getItem('itemsJson');
+    itemsJsonArray = JSON.parse(itemsJsonArrayStr);
     console.log(itemsJsonArray);
-    if(itemsJsonArray==null){
+    if (itemsJsonArray == null) {
         console.log("the array is null");
     }
-    else{
-        let tablebody=document.getElementById("tablebody");
-        let str="";
-        let arrLength=itemsJsonArray.length;
+    else {
+        let tablebody = document.getElementById("tablebody");
+        let str = "";
+        let arrLength = itemsJsonArray.length;
         console.log(arrLength);
-        itemsJsonArray.forEach((element,index) => {
-            str+=`
+        itemsJsonArray.forEach((element, index) => {
+            str += `
             <tr>
             <th scope="row">${++index}</th>
             <td>${element[0]}</td>
@@ -54,23 +58,25 @@ function update(){
             <td><button class="btn btn-sm btn-primary" onclick="deleteList(${--index})">Delete</button></td>
         </tr>
             `;
-    });
-    tablebody.innerHTML=str;
+        });
+        tablebody.innerHTML = str;
+        tit = document.getElementById('title').value = "";
+        desc = document.getElementById('description').value = "";
     }
-    
+
 }
-add.addEventListener("click",getAndUpdate);
+add.addEventListener("click", getAndUpdate);
 update();
 console.log("bahahah lol");
 
-function deleteList(itemIndex){
-    console.log("delete item ",itemIndex);
-    itemsJsonArrayStr=localStorage.getItem('itemsJson');
-    itemsJsonArray=JSON.parse(itemsJsonArrayStr);
+function deleteList(itemIndex) {
+    console.log("delete item ", itemIndex);
+    itemsJsonArrayStr = localStorage.getItem('itemsJson');
+    itemsJsonArray = JSON.parse(itemsJsonArrayStr);
     //Delete item element from the array 
 
-    itemsJsonArray.splice(itemIndex,1);
+    itemsJsonArray.splice(itemIndex, 1);
 
-    localStorage.setItem('itemsJson',JSON.stringify(itemsJsonArray));
+    localStorage.setItem('itemsJson', JSON.stringify(itemsJsonArray));
     update();
 }
