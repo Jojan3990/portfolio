@@ -6,6 +6,7 @@ async function showDialog() {
     if (mailTake == "" && messageTake == "") {
         console.log("null");
         document.getElementById('error-succ-msg').innerHTML="Enter required detail";
+        // window.location.replace("/databasePro/database-update.js");
     }
     else {
         itemsJsonArrayStr=localStorage.getItem('contact');
@@ -22,12 +23,13 @@ async function showDialog() {
             localStorage.setItem('contact',JSON.stringify(itemsJsonArray));
             // console.log("item added");
         }
+        // const databse_select="Select * from user_contact_message";
         document.getElementById('exampleInputEmail1').value="";
         messageTake = document.getElementById('exampleFormControlTextarea1').value="";
         document.getElementById('error-succ-msg').innerHTML="Thank you for your message";
     }
     // localStorage.setItem('mail', JSON.stringify(itemsJsonArray));
 }
-console.log(localStorage.getItem('contact'));
+// console.log(localStorage.getItem('contact'));
 
 

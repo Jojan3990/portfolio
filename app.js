@@ -9,10 +9,12 @@ app.engine('handlebars', engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 app.use('/', require(path.join(__dirname, 'routes/blog.js')));
+// app.use('/', require(path.join(__dirname, 'database/database-update.js')));
 // app.use(express.static(path.join(__dirname,'public')));
-// app.use(express.static(path.join(__dirname,'database.js')));
+// app.use(express.static(path.join(__dirname,'databasePro/database.js')));
 app.use(express.static(path.join(__dirname,'/')));
 app.listen(port, () => {
     console.log(`App listening to http://localhost:${port}`);
 })
 
+// module.exports=router;

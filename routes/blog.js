@@ -8,7 +8,7 @@ router.get('/',(req,res)=>{
     // res.send("bahahah");
 })
 router.get('/database',(req,res)=>{
-    res.render('profileHome');
+    // res.render('/database-update');
 })
 
 module.exports=router;
