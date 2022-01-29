@@ -55,7 +55,7 @@ function update() {
             <th scope="row">${++index}</th>
             <td>${element[0]}</td>
             <td>${element[1]}</td>
-            <td><button class="btn btn-sm btn-primary" onclick="deleteList(${--index})">Delete</button></td>
+            <td><button class="btn btn-sm btn-danger" onclick="deleteList(${--index})">Delete</button></td>
         </tr>
             `;
         });
