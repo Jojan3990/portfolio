@@ -8,16 +8,16 @@ router.use(bodyParser.urlencoded({ extended: true }));
 
 
 
-final_data = require('../databaseUpdate');
-async function dd() {
-    toSendHtml = await final_data();
-    // console.log(toSendHtml);
-    await router.get('/', (req, res) => {
-        res.render('profileHome');
-    })
+// final_data = require('../databaseUpdate');
+// async function dd() {
+//     toSendHtml = await final_data();
+//     // console.log(toSendHtml);
+//     await router.get('/', (req, res) => {
+//         res.render('profileHome');
+//     })
 
-}
-dd().then()
+// }
+// dd().then()
 
 const pool = mariadb.createPool({
     host: "localhost",
