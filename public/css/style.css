@@ -194,7 +194,11 @@ button{
 .banner_wrapper .container .scroolspy-bb{
     position: relative;
 }
-
+/* for img rezero kawai */
+.scroolspy-bb .zeroRe{
+    height: 15rem;
+    /* width: 50%; */
+}
 /* for loader-pg  */
 .loader_bg{
     position: fixed;

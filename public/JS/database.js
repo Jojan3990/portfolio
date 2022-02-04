@@ -1,12 +1,11 @@
-take = document.getElementById('submit_contact')
-take.addEventListener("click", showDialog);
+// take = document.getElementById('submit_contact')
+// take.addEventListener("click", showDialog);
 async function showDialog() {
     mailTake = document.getElementById('exampleInputEmail1').value;
     messageTake = document.getElementById('exampleFormControlTextarea1').value;
     if (mailTake == "" && messageTake == "") {
         console.log("null");
         document.getElementById('error-succ-msg').innerHTML="Enter required detail";
-        // window.location.replace("/databasePro/database-update.js");
     }
     else {
         itemsJsonArrayStr=localStorage.getItem('contact');
