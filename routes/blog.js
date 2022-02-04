@@ -18,7 +18,9 @@ router.use(bodyParser.urlencoded({ extended: true }));
 
 // }
 // dd().then()
-
+router.get('/', (req, res) => {
+            res.render('profileHome');
+        })
 const pool = mariadb.createPool({
     host: "localhost",
     user: "root",
